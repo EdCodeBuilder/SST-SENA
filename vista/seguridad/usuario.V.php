@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="table-responsive">
-                            <table id="tableDatos" class="table table-striped table-bordered table-hover">
+                            <table id="tableDatos" class="table table-striped table-bordered table-hover" style="border-color: #d04e03;">
                                 <thead>
                                     <tr>                                        
                                         <td align="center">Persona</td>
