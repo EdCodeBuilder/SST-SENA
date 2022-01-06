@@ -139,3 +139,7 @@ select{
 .switch > input:checked + label:before {
 	left:56px;
 }
+
+.table{
+    border-color: #d04e03;
+}
