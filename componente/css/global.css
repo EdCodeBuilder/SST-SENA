@@ -7,14 +7,16 @@
     background-color: #20a0ff;
 } */
 
+/*
 body{
-    background: url(../img/966271.jpg);
+    background-color: #f8f9fc;
 }
+*/
 
 label{
     font-family: Verdana, Arial, Helvetica, sans-serif;
     /* font-weight: bold; */
-    color: #396680;
+    color: #000000;
 }
 
 /* Con el :not([]) se hace una excepción a la clase de la animacion del chulo*/
@@ -34,19 +36,21 @@ div{
 td{
     font-weight: bold;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #396680;
+    color: #d04e03;
 }
 
 .margen{
-    background-color: rgb(194, 232, 255);
+    background-color: #8acb7e;
     margin: auto;
     width: 98%;
     margin-top: 15px;
 }
 
+/*
 h1{
-    color: #B39062;
+    color: #d04e03;
 }
+*/
 
 .caja{
     width: 150px;
@@ -75,7 +79,7 @@ h1{
 }
 
 .container{
-    background-color: rgb(225, 241, 251);
+    background-color: #acdaa3;
 }
 
 select{
