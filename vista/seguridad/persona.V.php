@@ -24,7 +24,7 @@
                         placeholder="Apellido">
                 </div>
                 <div class="col-12 col-sm-3">
-                    <label for="cmbEstado">Tipo de documento</label>
+                    <label for="cmbEstado" class="col-form-label">Tipo de documento</label>
                     <select class="lista form-control" id="cmbTipoDocumento">
                         <option value="" selected="selected">--Seleccione--</option>
                         <option value="CC">Cedula de ciudadania - CC</option>
@@ -45,7 +45,7 @@
                         placeholder="Edad">
                 </div>
                 <div class="col-12 col-sm-3">
-                    <label for="cmbGenero">Genero</label>
+                    <label for="cmbGenero" class="col-form-label">Genero</label>
                     <select class="lista form-control" id="cmbGenero">
                         <option value="" selected="selected">--Seleccione--</option>
                         <option value="M">Masculino</option>
@@ -54,7 +54,7 @@
                     </select>
                 </div>
                 <div class="col-12 col-sm-3">
-                    <label for="cmbEstado">Estado</label>
+                    <label for="cmbEstado" class="col-form-label">Estado</label>
                     <select class="lista form-control" id="cmbEstado">
                         <option value="" selected="selected">--Seleccione--</option>
                         <option value="1">Activo</option>

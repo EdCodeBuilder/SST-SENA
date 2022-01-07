@@ -24,7 +24,7 @@
                         <input type="text" name="txtFormulario" id="txtFormulario" value="" placeholder=" Formulario" class="caja form-control">
                     </div>
                     <div class="col-12 col-sm-4">
-                        <label for="cmbEstado">Estado</label>
+                        <label for="cmbEstado" class="col-form-label">Estado</label>
                         <select class="lista form-control" id="cmbEstado">
                             <option value="" selected="selected">--Seleccione--</option>
                             <option value="1">Activo</option>

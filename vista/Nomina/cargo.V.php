@@ -19,7 +19,7 @@
                         placeholder="Descripción">
                 </div>
                 <div class="col-12 col-sm-6">
-                    <label for="cmbEstado">Estado</label>
+                    <label for="cmbEstado" class="col-form-label">Estado</label>
                     <select class="lista form-control" id="cmbEstado">
                         <option value="" selected="selected">--Seleccione--</option>
                         <option value="1">Activo</option>
@@ -27,25 +27,25 @@
                     </select>
                 </div>
             </div>
-            <div class="row justify-content-sm-center">
-                <div>
-                    <input type="hidden" class="boton form-control btn-light btn-outline-primary" name="btnBuscar" id="btnBuscar" value="BUSCAR" placeholder="Código del empleado" onclick="Enviar('CONSULTAR',null);">
-                </div>
-                <div class="col-12 col-sm-2">
-                    <input type="button" class="boton form-control btn-light btn-outline-primary" name="btnRegistrar" value="REGISTRAR" id="btnRegistrar" placeholder="Descripción" onclick=" Enviar('ADICIONAR',null);">
-                </div>
-                <div class="col-12 col-sm-2">
-                    <input type="button" class="boton form-control btn-light btn-outline-primary" name="btnModificar" value="MODIFICAR" id="btnModificar" placeholder="Modificar" onclick=" Enviar('MODIFICAR',null);">
-                </div>
-                <div class="col-12 col-sm-2">
-                    <input type="button" class="boton form-control btn-light btn-outline-primary" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
-                </div>
+        </div>
+        <div class="row justify-content-sm-center">
+            <div>
+                <input type="hidden" class="boton form-control btn-light btn-outline-primary" name="btnBuscar" id="btnBuscar" value="BUSCAR" placeholder="Código del empleado" onclick="Enviar('CONSULTAR',null);">
+            </div>
+            <div class="col-12 col-sm-2">
+                <input type="button" class="boton form-control btn-light btn-outline-primary" name="btnRegistrar" value="REGISTRAR" id="btnRegistrar" placeholder="Descripción" onclick=" Enviar('ADICIONAR',null);">
+            </div>
+            <div class="col-12 col-sm-2">
+                <input type="button" class="boton form-control btn-light btn-outline-primary" name="btnModificar" value="MODIFICAR" id="btnModificar" placeholder="Modificar" onclick=" Enviar('MODIFICAR',null);">
+            </div>
+            <div class="col-12 col-sm-2">
+                <input type="button" class="boton form-control btn-light btn-outline-primary" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
             </div>
         </div>
             <div class="row">
                 <div class="col">
                     <div class="table-responsive">
-                        <table id="tableDatos" class="table table-striped table-bordered table-hover">
+                        <table id="tableDatos" class="table table-striped table-bordered table-hover" style="border-color: #d04e03;">
                             <thead>
                                 <tr>
                                     <td align="center">Descripción</td>

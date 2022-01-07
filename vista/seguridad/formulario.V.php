@@ -29,7 +29,7 @@
                         placeholder="Ubicación">
                 </div>
                 <div class="col-12 col-sm-3">
-                    <label for="cmbEstado">Estado</label>
+                    <label for="cmbEstado" class="col-form-label">Estado</label>
                     <select class="lista form-control" id="cmbEstado">
                         <option value="" selected="selected">--Seleccione--</option>
                         <option value="1">Activo</option>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col">
                     <div class="table-responsive">
-                        <table id="tableDatos" class="table table-striped table-bordered table-hover">
+                        <table id="tableDatos" class="table table-striped table-bordered table-hover" style="border-color: #d04e03;">
                             <thead>
                                 <tr>
                                     <td align="center">Descripción</td>
