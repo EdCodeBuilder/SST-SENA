@@ -19,3 +19,7 @@ https://www.w3schools.com/cssref/css3_pr_background-size.asp
 https://www.color-hex.com/
 
 https://getbootstrap.com/docs/4.6/getting-started/introduction/
+
+https://unminify.com/
+
+https://www.cleancss.com/css-minify/
