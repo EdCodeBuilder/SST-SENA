@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col">
                     <div class="table-responsive">
-                        <table id="tableDatos" class="table table-striped table-bordered table-hover table-order-column" style="border-color: #d04e03;">
+                        <table id="tableDatos" class="table table-striped table-bordered table-hover table-order-column" style="border-color: #ffffff;">
                             <thead>
                                 <tr>
                                     <td align="center">Descripción</td>
