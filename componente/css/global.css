@@ -16,7 +16,7 @@ body{
 label{
     font-family: Verdana, Arial, Helvetica, sans-serif;
     /* font-weight: bold; */
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Con el :not([]) se hace una excepción a la clase de la animacion del chulo*/
@@ -36,11 +36,11 @@ div{
 td{
     font-weight: bold;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #d04e03;
+    color: #000000;
 }
 
 .margen{
-    background-color: #8acb7e;
+    background-color: #4e9b91;
     margin: auto;
     width: 98%;
     margin-top: 15px;
@@ -79,7 +79,7 @@ h1{
 }
 
 .container{
-    background-color: #acdaa3;
+    background-color: #238276;
 }
 
 select{
