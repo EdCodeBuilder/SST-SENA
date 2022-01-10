@@ -10,9 +10,10 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <link rel="stylesheet" href="../../componente/fonts/style.css">
     <!-- <link rel="stylesheet" href="../../componente/libreria/jquey/jquery-3.6.0.min.js"> -->
-    <link rel="stylesheet" href="../../componente/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/sena.css">
     <!-- <script src="../../popper.min.js"></script> -->
-    <script src="../../componente/bootstrap/js/bootstrap.min.js"></script>    
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"> -->
     <!-- Marco de la tabla -->
