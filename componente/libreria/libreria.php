@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../componente/fonts/style.css">
     <!-- <link rel="stylesheet" href="../../componente/libreria/jquey/jquery-3.6.0.min.js"> -->
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/bootstrap/css/sena.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/btn-sena.css">
     <!-- <script src="../../popper.min.js"></script> -->
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
