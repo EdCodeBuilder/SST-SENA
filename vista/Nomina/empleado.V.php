@@ -91,31 +91,29 @@ require("../../componente/libreria/libreria.php");
                     <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
                 </div>
             </div>
-            <div class="row justify-content-sm-center">
-                <div class="row">
-                    <div class="col">
-                        <div class="table-responsive">
-                            <table id="tableDatos" class="table table-striped table-bordered table-hover" style="border-color: #d04e03;">
-                                <thead>
-                                    <tr>
-                                        <td align="center">Persona</td>
-                                        <td align="center">Cargo</td>
-                                        <td align="center">Correo institucional</td>
-                                        <td align="center">Fecha ingreso</td>
-                                        <td align="center">ARL</td>
-                                        <td align="center">Salud</td>
-                                        <td align="center">Pensión</td>
-                                        <td align="center">Sueldo básico</td>
-                                        <td align="center">Estado</td>
-                                        <td align="center">Modificar</td>
-                                        <td align="center">Eliminar</td>
-                                    </tr>
-                                </thead>
-                                <tbody id="resultado">
-                                    
-                                </tbody>
-                            </table>
-                        </div>
+            <div class="row">
+                <div class="col">
+                    <div class="table-responsive">
+                        <table id="tableDatos" class="table table-striped table-bordered table-hover" style="border-color: #d04e03;">
+                            <thead>
+                                <tr>
+                                    <td align="center">Persona</td>
+                                    <td align="center">Cargo</td>
+                                    <td align="center">Correo institucional</td>
+                                    <td align="center">Fecha ingreso</td>
+                                    <td align="center">ARL</td>
+                                    <td align="center">Salud</td>
+                                    <td align="center">Pensión</td>
+                                    <td align="center">Sueldo básico</td>
+                                    <td align="center">Estado</td>
+                                    <td align="center">Modificar</td>
+                                    <td align="center">Eliminar</td>
+                                </tr>
+                            </thead>
+                            <tbody id="resultado">
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

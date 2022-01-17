@@ -29,7 +29,7 @@ require("../../componente/libreria/libreria.php");
                         <input type="text" name="txtRol" id="txtRol" value="" placeholder=" Rol" class="caja form-control">
                     </div>
                     <div class="col-12 col-sm-4">
-                        <label for="cmbEstado">Estado</label>
+                        <label for="cmbEstado" class="col-form-label">Estado</label>
                         <select class="lista form-control" id="cmbEstado">
                             <option value="" selected="selected">--Seleccione--</option>
                             <option value="1">Activo</option>
@@ -52,9 +52,7 @@ require("../../componente/libreria/libreria.php");
                     <div class="col-12 col-sm-2">
                         <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
                     </div>
-                </div>
-                <br></br>
-                <div class="row">
+                    <!-- <div class="row"> -->
                     <div class="col">
                         <div class="table-responsive">
                             <table id="tableDatos" class="table table-striped table-bordered table-hover">
@@ -70,12 +68,13 @@ require("../../componente/libreria/libreria.php");
                                     </tr>
                                 </thead>
                                 <tbody id="resultado">
-                                    
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </form>
 </body>

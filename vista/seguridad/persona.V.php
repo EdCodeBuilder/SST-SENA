@@ -14,7 +14,7 @@ require("../../componente/libreria/libreria.php");
         <div class="margen" align="center">
             <label>
                 <h1>Persona</h1>
-            </label><br>
+            </label>
             <div class="container form-group">
                 <div class="row">
                     <div class="col-12 col-sm-3">
@@ -64,22 +64,19 @@ require("../../componente/libreria/libreria.php");
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="row justify-content-sm-center">
-                    <div>
-                        <input type="hidden" class="boton form-control btn-outline-sena" name="btnBuscar" id="btnBuscar" value="BUSCAR" placeholder="Código del empleado" onclick="Enviar('CONSULTAR',null);">
-                    </div>
-                    <div class="col-12 col-sm-2">
-                        <input type="button" class="boton form-control btn-outline-sena" name="btnRegistrar" value="REGISTRAR" id="btnRegistrar" placeholder="Descripción" onclick=" Enviar('ADICIONAR',null);">
-                    </div>
-                    <div class="col-12 col-sm-2">
-                        <input type="button" class="boton form-control btn-outline-sena" name="btnModificar" value="MODIFICAR" id="btnModificar" placeholder="Modificar" onclick=" Enviar('MODIFICAR',null);">
-                    </div>
-                    <div class="col-12 col-sm-2">
-                        <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
-                    </div>
+            <div class="row justify-content-sm-center">
+                <div>
+                    <input type="hidden" class="boton form-control btn-outline-sena" name="btnBuscar" id="btnBuscar" value="BUSCAR" placeholder="Código del empleado" onclick="Enviar('CONSULTAR',null);">
                 </div>
-                <br></br>
+                <div class="col-12 col-sm-2">
+                    <input type="button" class="boton form-control btn-outline-sena" name="btnRegistrar" value="REGISTRAR" id="btnRegistrar" placeholder="Descripción" onclick=" Enviar('ADICIONAR',null);">
+                </div>
+                <div class="col-12 col-sm-2">
+                    <input type="button" class="boton form-control btn-outline-sena" name="btnModificar" value="MODIFICAR" id="btnModificar" placeholder="Modificar" onclick=" Enviar('MODIFICAR',null);">
+                </div>
+                <div class="col-12 col-sm-2">
+                    <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
+                </div>
                 <div class="row">
                     <div class="col">
                         <div class="table-responsive">
@@ -98,7 +95,7 @@ require("../../componente/libreria/libreria.php");
                                     </tr>
                                 </thead>
                                 <tbody id="resultado">
-                                    
+
                                 </tbody>
                             </table>
                         </div>
