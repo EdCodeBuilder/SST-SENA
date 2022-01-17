@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <title>Con-tex</title>
+    <link rel="icon" type="image/jpg" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sena_Colombia_logo.svg/640px-Sena_Colombia_logo.svg.png">
     <!-- CSS Global -->
     <link rel='stylesheet' type='text/css' media='screen' href='../../componente/css/global.css'>
     <!-- Iconos de las tablas -->
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/bootstrap/css/btn-sena.css">
     <!-- <script src="../../popper.min.js"></script> -->
-    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>    
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"> -->
     <!-- Marco de la tabla -->
@@ -31,6 +32,6 @@
     <!-- SweetAlert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<?php    
-    include_once  '../../controlador/seguridad/validarPermiso.C.php'
+<?php
+include_once  '../../controlador/seguridad/validarPermiso.C.php'
 ?>
