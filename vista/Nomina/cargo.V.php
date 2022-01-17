@@ -1,11 +1,16 @@
-<?php 
-    session_start();
-    $_SESSION['ruta_formulario']= basename( __FILE__ );
-    require ("../../componente/libreria/libreria.php"); 
+<?php
+session_start();
+$_SESSION['ruta_formulario'] = basename(__FILE__);
+require("../../componente/libreria/libreria.php");
 ?>
 <script src="../../js/nomina/cargo.js"></script>
+
+<head>
+    <title>Cargo</title>
+</head>
+
 <body onload="Enviar('CONSULTAR',null)"></body>
-    <form name="frmCargo" id="frmCargo"> 
+<form name="frmCargo" id="frmCargo">
     <div class="margen" align="center">
         <label>
             <h1>Cargo</h1>
@@ -15,8 +20,7 @@
                 <input type="hidden" name="hidIdCargo" id="hidIdCargo" value="">
                 <div class="col-12 col-sm-6">
                     <label class="col-form-label">Descripción</label>
-                    <input type="text" class="caja form-control" name="txtDescripcion" value="" id="txtDescripcion"
-                        placeholder="Descripción">
+                    <input type="text" class="caja form-control" name="txtDescripcion" value="" id="txtDescripcion" placeholder="Descripción">
                 </div>
                 <div class="col-12 col-sm-6">
                     <label for="cmbEstado" class="col-form-label">Estado</label>
@@ -42,6 +46,7 @@
                 <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
             </div>
         </div>
+        <div class="row justify-content-sm-center">
             <div class="row">
                 <div class="col">
                     <div class="table-responsive">
@@ -55,11 +60,13 @@
                                 </tr>
                             </thead>
                             <tbody id="resultado">
+                                
                             </tbody>
                         </table>
                     </div>
+                </div>
             </div>
         </div>
     </div>
-    </form>
+</form>
 </body>

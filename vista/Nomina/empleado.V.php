@@ -1,78 +1,80 @@
-<?php 
-    session_start();
-    $_SESSION['ruta_formulario']= basename( __FILE__ );
-    require ("../../componente/libreria/libreria.php"); 
+<?php
+session_start();
+$_SESSION['ruta_formulario'] = basename(__FILE__);
+require("../../componente/libreria/libreria.php");
 ?>
 <script src="../../js/nomina/empleado.js"></script>
+
+<head>
+    <title>Empleado</title>
+</head>
+
 <body onload="Enviar('CONSULTAR',null)">
     <form name="frmEmpleado" id="frmEmpleado">
-    <div class="margen" align="center">
-        <label>
-            <h1>Empleado</h1>
-        </label><br>
-        <div class="container form-group">
-            <div class="row">
-                <div class="col-12 col-sm-4">
-                    <input type="hidden" name="hidIdEmpleado" id="hidIdEmpleado" value="">
-                    <label class="col-form-label">Cargo</label>
-                    <input type="hidden" name="hidIdCargo" id="hidIdCargo" value=""><br>
-                    <input type="text" name="txtCargo" id="txtCargo" value="" class="caja form-control" placeholder="Cargo">
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label class="col-form-label">Correo institucional</label>
-                    <input type="email" name="txtCorreoInstitucional" id="txtCorreoInstitucional" value="" class="caja form-control"
-                        placeholder="Correo">
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label class="col-form-label">Fecha ingreso</label>
-                    <input type="date" name="datFechaIngreso" id="datFechaIngreso" value="" class="caja form-control"
-                        placeholder="Fecha ingreso">
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label class="col-form-label">ARL</label>
-                    <select class="lista form-control" id="cmbArl">
-                        <option value="" selected="selected">--Seleccione--</option>
-                        <option value="Equidad Seguros">Equidad Seguros</option>
-                        <option value="Seguros Bolivar">Seguros Bolivar</option>
-                        <option value="Sura">Sura</option>
-                    </select>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label class="col-form-label">Salud</label>
-                    <select class="lista form-control" id="cmbSalud">
-                        <option value="" selected="selected">--Seleccione--</option>
-                        <option value="Comfamiliar">Comfamiliar</option>
-                        <option value="Nueva Eps">Nueva Eps</option>
-                        <option value="Sanitas">Sanitas</option>
-                    </select>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label class="col-form-label">Pensión</label>
+        <div class="margen" align="center">
+            <label>
+                <h1>Empleado</h1>
+            </label>
+            <div class="container form-group">
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <input type="hidden" name="hidIdEmpleado" id="hidIdEmpleado" value="">
+                        <label class="col-form-label">Cargo</label>
+                        <input type="hidden" name="hidIdCargo" id="hidIdCargo" value="">
+                        <input type="text" name="txtCargo" id="txtCargo" value="" class="caja form-control" placeholder="Cargo">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label class="col-form-label">Correo institucional</label>
+                        <input type="email" name="txtCorreoInstitucional" id="txtCorreoInstitucional" value="" class="caja form-control" placeholder="Correo">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label class="col-form-label">Fecha ingreso</label>
+                        <input type="date" name="datFechaIngreso" id="datFechaIngreso" value="" class="caja form-control" placeholder="Fecha ingreso">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label class="col-form-label">ARL</label>
+                        <select class="lista form-control" id="cmbArl">
+                            <option value="" selected="selected">--Seleccione--</option>
+                            <option value="Equidad Seguros">Equidad Seguros</option>
+                            <option value="Seguros Bolivar">Seguros Bolivar</option>
+                            <option value="Sura">Sura</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label class="col-form-label">Salud</label>
+                        <select class="lista form-control" id="cmbSalud">
+                            <option value="" selected="selected">--Seleccione--</option>
+                            <option value="Comfamiliar">Comfamiliar</option>
+                            <option value="Nueva Eps">Nueva Eps</option>
+                            <option value="Sanitas">Sanitas</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label class="col-form-label">Pensión</label>
                         <select class="lista form-control" id="cmbPension">
                             <option value="" selected="selected">--Seleccione--</option>
                             <option value="Colpesiones">Colpesiones</option>
                             <option value="Porvenir">Porvenir</option>
                             <option value="Proteccion">Proteccion</option>
                         </select>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label class="col-form-label">Persona</label>
-                    <input type="hidden" name="hidIdPersona" id="hidIdPersona" value=""><br>
-                    <input type="text" name="txtPersona" id="txtPersona" value="" class="caja form-control" placeholder="Persona">
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label class="col-form-label">Sueldo básico</label>
-                    <input type="number" name="numSueldoBasico" id="numSueldoBasico" value="" class="caja form-control"
-                        placeholder="Sueldo básico">
-                </div>
-                <div class="col-12 col-sm-4">
-                    <label for="cmbEstado" class="col-form-label">Estado</label>
-                    <select class="lista form-control" id="cmbEstado">
-                        <option value="" selected="selected">--Seleccione--</option>
-                        <option value="1">Activo</option>
-                        <option value="0">Inactivo</option>
-                    </select>
-                </div> 
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label class="col-form-label">Persona</label>
+                        <input type="hidden" name="hidIdPersona" id="hidIdPersona" value="">
+                        <input type="text" name="txtPersona" id="txtPersona" value="" class="caja form-control" placeholder="Persona">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label class="col-form-label">Sueldo básico</label>
+                        <input type="number" name="numSueldoBasico" id="numSueldoBasico" value="" class="caja form-control" placeholder="Sueldo básico">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <label for="cmbEstado" class="col-form-label">Estado</label>
+                        <select class="lista form-control" id="cmbEstado">
+                            <option value="" selected="selected">--Seleccione--</option>
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-sm-center">
@@ -89,7 +91,7 @@
                     <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
                 </div>
             </div>
-            <br></br>
+            <div class="row justify-content-sm-center">
                 <div class="row">
                     <div class="col">
                         <div class="table-responsive">
@@ -110,6 +112,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="resultado">
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -117,6 +120,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</form>
+        </div>
+        </div>
+    </form>
 </body>

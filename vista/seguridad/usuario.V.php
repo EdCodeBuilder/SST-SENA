@@ -1,14 +1,19 @@
-<?php 
-    session_start();
-    $_SESSION['ruta_formulario']= basename( __FILE__ );
-    include_once ("../../componente/libreria/libreria.php"); 
-    
+<?php
+session_start();
+$_SESSION['ruta_formulario'] = basename(__FILE__);
+include_once("../../componente/libreria/libreria.php");
+
 ?>
 <script src="../../js/seguridad/usuario.js"></script>
+
+<head>
+    <title>Usuario</title>
+</head>
+
 <body onload="Enviar('CONSULTAR',null)">
     <form name="frmUsuario" id="frmUsuario">
         <div class="margen" align="center">
-            <label> 
+            <label>
                 <h1>Usuario</h1>
             </label>
             <div class="container form-group">
@@ -31,7 +36,8 @@
                     <div class="col-12 col-sm-4">
                         <label class="col-form-label">Fecha Expiracion</label>
                         <input type="date" name="datFechaExpiracion" id="datFechaExpiracion" value="" class="caja form-control">
-                    </div> <div class="col-12 col-sm-4">
+                    </div>
+                    <div class="col-12 col-sm-4">
                         <label class="col-form-label">Persona</label>
                         <input type="hidden" name="hidIdPersona" id="hidIdPersona" value=""><br>
                         <input type="text" name="txtPersona" id="txtPersona" value="" class="caja form-control" placeholder="Persona">
@@ -47,27 +53,27 @@
                 </div>
             </div>
             <div class="row">
-            <div class="row justify-content-sm-center">
-                <div>
-                    <input type="hidden" class="boton form-control btn-outline-sena" name="btnBuscar" id="btnBuscar" value="BUSCAR" placeholder="Código del empleado" onclick="Enviar('CONSULTAR',null);">
+                <div class="row justify-content-sm-center">
+                    <div>
+                        <input type="hidden" class="boton form-control btn-outline-sena" name="btnBuscar" id="btnBuscar" value="BUSCAR" placeholder="Código del empleado" onclick="Enviar('CONSULTAR',null);">
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <input type="button" class="boton form-control btn-outline-sena" name="btnRegistrar" value="REGISTRAR" id="btnRegistrar" placeholder="Descripción" onclick=" Enviar('ADICIONAR',null);">
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <input type="button" class="boton form-control btn-outline-sena" name="btnModificar" value="MODIFICAR" id="btnModificar" placeholder="Modificar" onclick=" Enviar('MODIFICAR',null);">
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
+                    </div>
                 </div>
-                <div class="col-12 col-sm-2">
-                    <input type="button" class="boton form-control btn-outline-sena" name="btnRegistrar" value="REGISTRAR" id="btnRegistrar" placeholder="Descripción" onclick=" Enviar('ADICIONAR',null);">
-                </div>
-                <div class="col-12 col-sm-2">
-                    <input type="button" class="boton form-control btn-outline-sena" name="btnModificar" value="MODIFICAR" id="btnModificar" placeholder="Modificar" onclick=" Enviar('MODIFICAR',null);">
-                </div>
-                <div class="col-12 col-sm-2">
-                    <input type="button" class="boton form-control btn-outline-sena" name="btnLimpiar" value="LIMPIAR" id="btnLimpiar" placeholder="Limpiar" onclick=" Limpiar();">
-                </div>
-            </div>
-            <br></br>
+                <br></br>
                 <div class="row">
                     <div class="col">
                         <div class="table-responsive">
                             <table id="tableDatos" class="table table-striped table-bordered table-hover" style="border-color: #d04e03;">
                                 <thead>
-                                    <tr>                                        
+                                    <tr>
                                         <td align="center">Persona</td>
                                         <td align="center">Usuario</td>
                                         <td align="center">Fecha Activacion</td>
@@ -78,11 +84,12 @@
                                     </tr>
                                 </thead>
                                 <tbody id="resultado">
+                                    
                                 </tbody>
                             </table>
-                        </div>  
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </form>
 </body>
