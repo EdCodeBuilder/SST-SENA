@@ -23,7 +23,7 @@ if (isset($accion)) {
                 $resultado = $usuario->Agregar();
                 $respuesta['respuesta']="La información se adicionó correctamente.";
             } catch (Exception $e) {
-                $respuesta['respuesta']="Error, no fué posible adicionar la información, consulte con el administrador.";
+                $respuesta['respuesta']="Error, no fué posible adicionar la información, consulte con el administrador. Mensaje: ".$e->getMessage();
             }
             $respuesta['accion']='ADICIONAR';
             echo json_encode($respuesta);
