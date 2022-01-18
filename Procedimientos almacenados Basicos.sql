@@ -253,12 +253,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Agregar_formulario_rol` (IN `idRol`
 END$$
 
 DROP PROCEDURE IF EXISTS `Agregar_persona`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Agregar_persona` (IN `nombre` VARCHAR(100), IN `apellido` VARCHAR(100), IN `tipoDocumento` SET('CC','TI','CE','PEP'), IN `documento` INT(11), IN `edad` INT(11), IN `genero` ENUM('M','F','O'), IN `estado` ENUM('0','1'), IN `idUsuarioCreacion` INT(11), IN `idUsuarioModificacion` INT(11))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Agregar_persona` (IN `nombre` VARCHAR(100), IN `apellido` VARCHAR(100), IN `tipoDocumento` SET('CC','TI','CE','PEP'), IN `documento` INT(11), IN `genero` ENUM('M','F','O'), IN `estado` ENUM('0','1'), IN `idUsuarioCreacion` INT(11), IN `idUsuarioModificacion` INT(11))  BEGIN
 INSERT INTO persona(nombre
 					,apellido
 					,tipo_documento
 					,documento
-					,edad
 					,genero
 					,estado
 					,fecha_creacion
@@ -270,7 +269,6 @@ VALUES (nombre
 		,apellido
 		,tipoDocumento
 		,documento
-		,edad
 		,genero
 		,estado
 		,NOW()
@@ -395,13 +393,12 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Modificar_formulario_rol` (IN `idRo
 END$$
 
 DROP PROCEDURE IF EXISTS `Modificar_persona`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Modificar_persona` (IN `nombre` VARCHAR(100), IN `apellido` VARCHAR(100), IN `tipoDocumento` SET('CC','TI','CE','PEP'), IN `documento` INT(11), IN `edad` INT(11), IN `genero` ENUM('M','F','O'), IN `estado` ENUM('0','1'), IN `idUsuarioModificacion` INT(11), IN `idPersona` INT(11))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Modificar_persona` (IN `nombre` VARCHAR(100), IN `apellido` VARCHAR(100), IN `tipoDocumento` SET('CC','TI','CE','PEP'), IN `documento` INT(11), IN `genero` ENUM('M','F','O'), IN `estado` ENUM('0','1'), IN `idUsuarioModificacion` INT(11), IN `idPersona` INT(11))  BEGIN
 	UPDATE persona 
 	SET nombre = nombre
 		,apellido = apellido
 		,tipo_documento = tipoDocumento
 		,documento = documento
-		,edad = edad
 		,genero = genero
 		,estado = estado
 		,fecha_modificacion = NOW()
