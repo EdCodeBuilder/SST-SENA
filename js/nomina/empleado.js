@@ -7,9 +7,9 @@ id=$('#hidIdEmpleado').val();
         "idCargo":$('#hidIdCargo').val(),
         "correoInstitucional":$('#txtCorreoInstitucional').val(),   
         "fechaIngreso":$('#datFechaIngreso').val(), 
-        "arl":$('#cmbArl').val(), 
-        "salud":$('#cmbSalud').val(), 
-        "pension":$('#cmbPension').val(),
+        "arl":$('#txtArl').val(), 
+        "salud":$('#txtSalud').val(), 
+        "pension":$('#txtPension').val(),
         "idPersona":$('#hidIdPersona').val(),  
         "sueldoBasico":$('#numSueldoBasico').val(),   
         "estado":$('#cmbEstado').val(),
@@ -77,9 +77,9 @@ id=$('#hidIdEmpleado').val();
                     $('#txtCargo').val(respuesta['cargo']);
                     $('#txtCorreoInstitucional').val(respuesta['correoInstitucional']);
                     $('#datFechaIngreso').val(respuesta['fechaIngreso']);
-                    $('#cmbArl').val(respuesta['arl']);
-                    $('#cmbSalud').val(respuesta['salud']);
-                    $('#cmbPension').val(respuesta['pension']);
+                    $('#txtArl').val(respuesta['arl']);
+                    $('#txtSalud').val(respuesta['salud']);
+                    $('#txtPension').val(respuesta['pension']);
                     $('#hidIdPersona').val(respuesta['idPersona']);
                     $('#txtPersona').val(respuesta['persona']);
                     $('#numSueldoBasico').val(respuesta['sueldoBasico']);
@@ -131,9 +131,9 @@ function Limpiar(){
     $('#txtCargo').val("");    
     $('#txtCorreoInstitucional').val("");
     $('#datFechaIngreso').val("");
-    $('#cmbArl').val("");    
-    $('#cmbSalud').val("");
-    $('#cmbPension').val("");
+    $('#txtArl').val("");    
+    $('#txtSalud').val("");
+    $('#txtPension').val("");
     $('#txtPersona').val("");
     $('#numSueldoBasico').val("");
     $('#cmbEstado').val("");

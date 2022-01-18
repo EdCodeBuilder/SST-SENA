@@ -33,30 +33,33 @@ require("../../componente/libreria/libreria.php");
                     </div>
                     <div class="col-12 col-sm-4">
                         <label class="col-form-label">ARL</label>
-                        <select class="lista form-control" id="cmbArl">
+                        <input type="text" name="txtArl" id="txtArl" value="" class="caja form-control" placeholder="ARL">
+                        <!-- <select class="lista form-control" id="cmbArl">
                             <option value="" selected="selected">--Seleccione--</option>
                             <option value="Equidad Seguros">Equidad Seguros</option>
                             <option value="Seguros Bolivar">Seguros Bolivar</option>
                             <option value="Sura">Sura</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="col-12 col-sm-4">
                         <label class="col-form-label">Salud</label>
-                        <select class="lista form-control" id="cmbSalud">
+                        <input type="text" name="txtSalud" id="txtSalud" value="" class="caja form-control" placeholder="Salud">
+                        <!-- <select class="lista form-control" id="cmbSalud">
                             <option value="" selected="selected">--Seleccione--</option>
                             <option value="Comfamiliar">Comfamiliar</option>
                             <option value="Nueva Eps">Nueva Eps</option>
                             <option value="Sanitas">Sanitas</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="col-12 col-sm-4">
                         <label class="col-form-label">Pensión</label>
-                        <select class="lista form-control" id="cmbPension">
+                        <input type="text" name="txtPension" id="txtPension" value="" class="caja form-control" placeholder="Pensión">
+                        <!-- <select class="lista form-control" id="cmbPension">
                             <option value="" selected="selected">--Seleccione--</option>
                             <option value="Colpesiones">Colpesiones</option>
                             <option value="Porvenir">Porvenir</option>
                             <option value="Proteccion">Proteccion</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="col-12 col-sm-4">
                         <label class="col-form-label">Persona</label>
