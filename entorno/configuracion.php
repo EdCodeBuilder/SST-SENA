@@ -1,5 +1,5 @@
 <?php
-define('DATABASE', 'contex');
+define('DATABASE', 'sstsena');
 define('PASSWORD', '');
 define('SERVERNAME', 'localhost');
 define('USER', 'root');
