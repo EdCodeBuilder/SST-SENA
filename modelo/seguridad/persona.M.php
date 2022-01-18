@@ -10,7 +10,6 @@ class Persona
     private $apellido;
     private $tipoDocumento;
     private $documento;
-    private $edad;
     private $genero;
     private $estado;
     private $fechaCreacion;
@@ -122,27 +121,6 @@ class Persona
     public function setDocumento($documento)
     {
         $this->documento = $documento;
-    }
-    
-    /**
-     * Obtiene la edad de persona
-     * @access public
-     * @return void
-     */
-    public function getEdad()
-    {
-        return $this->edad;
-    }
-
-    /**
-     * Coloca la edad de persona
-     * @access public
-     * @param integer $edad
-     * @return void
-     */
-    public function setEdad($edad)
-    {
-        $this->edad = $edad;
     }
     
     /**
@@ -294,7 +272,6 @@ class Persona
                             ,'$this->apellido'
                             ,'$this->tipoDocumento'
                             , $this->documento
-                            , $this->edad
                             ,'$this->genero'
                             ,'$this->estado'
                             , $this->idUsuarioCreacion
@@ -316,7 +293,6 @@ class Persona
                             ,'$this->apellido'
                             ,'$this->tipoDocumento'
                             , $this->documento
-                            , $this->edad
                             ,'$this->genero'
                             ,'$this->estado'
                             , $this->idUsuarioModificacion
@@ -388,10 +364,6 @@ class Persona
             $condicion=$condicion.$whereAnd." genero = '$this->genero' ";
             $whereAnd = ' AND ';
         }
-        if ($this->edad !='') {
-            $condicion=$condicion.$whereAnd." edad LIKE '%$this->edad%' ";
-            $whereAnd = ' AND ';
-        }
         if ($this->estado !='') {
             $condicion=$condicion.$whereAnd." estado = '$this->estado' ";
             $whereAnd = ' AND ';
@@ -411,7 +383,6 @@ class Persona
         unset($this->apellido);
         unset($this->tipoDocumento);
         unset($this->documento);
-        unset($this->edad);
         unset($this->genero);
         unset($this->estado);
         unset($this->fechaCreacion);

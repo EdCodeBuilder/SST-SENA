@@ -15,7 +15,6 @@ if (isset ($accion)){
                 $persona->setApellido($_POST['apellido']);
                 $persona->setTipoDocumento($_POST['tipoDocumento']);
                 $persona->setDocumento($_POST['documento']);
-                $persona->setEdad($_POST['edad']);
                 $persona->setGenero($_POST['genero']);
                 $persona->setEstado($_POST['estado']);
                 $persona->setIdUsuarioCreacion(1); // Obtener id de la persona con la variable session
@@ -36,7 +35,6 @@ if (isset ($accion)){
                 $persona->setApellido($_POST['apellido']);
                 $persona->setTipoDocumento($_POST['tipoDocumento']);
                 $persona->setDocumento($_POST['documento']);
-                $persona->setEdad($_POST['edad']);
                 $persona->setGenero($_POST['genero']);
                 $persona->setEstado($_POST['estado']);
                 $persona->setIdUsuarioModificacion(1);
@@ -68,7 +66,6 @@ if (isset ($accion)){
                 $persona->setApellido($_POST['apellido']);
                 $persona->setTipoDocumento($_POST['tipoDocumento']);
                 $persona->setDocumento($_POST['documento']);
-                $persona->setEdad($_POST['edad']);
                 $persona->setGenero($_POST['genero']);
                 $persona->setEstado($_POST['estado']);                              
                 $resultado = $persona->consultar();
@@ -80,8 +77,7 @@ if (isset ($accion)){
                         $respuesta['nombre'] = $rowBuscar->nombre;
                         $respuesta['apellido'] = $rowBuscar->apellido;
                         $respuesta['tipoDocumento'] = $rowBuscar->tipo_documento;
-                        $respuesta['documento'] = $rowBuscar->documento;
-                        $respuesta['edad'] = $rowBuscar->edad;                           
+                        $respuesta['documento'] = $rowBuscar->documento;                           
                         $respuesta['genero'] = $rowBuscar->genero;
                         $respuesta['estado'] = $rowBuscar->estado;
                         $respuesta['eliminar'] = "<input type='button' name='eliminar' class='eliminar' value='Eliminar' onclick='Enviar(\"ELIMINAR\",".$rowBuscar->id_persona.")'>";

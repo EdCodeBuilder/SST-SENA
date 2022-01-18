@@ -41,10 +41,6 @@ require("../../componente/libreria/libreria.php");
                         <input type="number" name="numDocumento" id="numDocumento" value="" class="caja form-control" placeholder="Documento">
                     </div>
                     <div class="col-12 col-sm-2"></div>
-                    <div class="col-12 col-sm-2">
-                        <label class="col-form-label">Edad</label>
-                        <input type="number" name="numEdad" id="numEdad" value="" class="caja form-control" placeholder="Edad">
-                    </div>
                     <div class="col-12 col-sm-3">
                         <label for="cmbGenero" class="col-form-label">Genero</label>
                         <select class="lista form-control" id="cmbGenero">
@@ -87,7 +83,6 @@ require("../../componente/libreria/libreria.php");
                                         <td align="center">Apellido</td>
                                         <td align="center">Tipo de doc</td>
                                         <td align="center">Documento</td>
-                                        <td align="center">Edad</td>
                                         <td align="center">Genero</td>
                                         <td align="center">Estado</td>
                                         <td align="center">Modificar</td>

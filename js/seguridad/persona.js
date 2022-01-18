@@ -7,8 +7,7 @@ function Enviar(accion,id){
         "nombre":$('#txtNombre').val(),
         "apellido":$('#txtApellido').val(),
         "tipoDocumento":$('#cmbTipoDocumento').val(),
-        "documento":$('#numDocumento').val(),
-        "edad":$('#numEdad').val(),  
+        "documento":$('#numDocumento').val(),  
         "genero" :$('#cmbGenero').val(),       
         "estado":$('#cmbEstado').val(),
         "accion" : accion
@@ -72,7 +71,6 @@ function Enviar(accion,id){
                     $('#txtApellido').val(respuesta['apellido']);
                     $('#cmbTipoDocumento').val(respuesta['tipoDocumento']);
                     $('#numDocumento').val(respuesta['documento']);
-                    $('#numEdad').val(respuesta['edad']);
                     $('#cmbGenero').val(respuesta['genero']);
                     $('#cmbEstado').val(respuesta['estado']);
                     $('#divEliminar').html(respuesta['eliminar']);
@@ -100,8 +98,7 @@ function Limpiar(){
     $('#txtNombre').val("");  
     $('#txtApellido').val(""); 
     $('#cmbTipoDocumento').val("");
-    $('#numDocumento').val("");     
-    $('#numEdad').val("");    
+    $('#numDocumento').val("");    
     $('#cmbGenero').val("");
     $('#cmbEstado').val("");
 }
