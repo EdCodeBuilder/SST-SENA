@@ -25,6 +25,7 @@ function Enviar(accion, id) {
         "agenteAccidente": $('#txtAgenteAccidente').val(),
         "impactoAccidente": $('#cmbImpactoAccidente').val(),
         "fechaLimiteInvestigacion": $('#datFechaLimiteInvestigacion').val(),
+        "fechaInvestigacionCurso":$('#datFechaInvestigacionCurso').val(),
         "estadoImplementacionAcciones": $('#cmbEstadoImplementacionAcciones').val(),
         "pruebasAccidenteArl": $('#cmbPruebasAccidenteArl').val(),
         "calificacionArlAccidente": $('#cmbCalificacionArlAccidente').val(),
@@ -106,6 +107,7 @@ function Enviar(accion, id) {
                 $('#txtAgenteAccidente').val(respuesta['agenteAccidente']);
                 $('#cmbImpactoAccidente').val(respuesta['impactoAccidente']);
                 $('#datFechaLimiteInvestigacion').val(respuesta['fechaLimiteInvestigacion']);
+                $('#datFechaInvestigacionCurso').val(respuesta['fechaInvestigacionCurson']);
                 $('#cmbEstadoImplementacionAcciones').val(respuesta['estadoImplementacionAcciones']);
                 $('#cmbPruebasAccidenteArl').val(respuesta['pruebasAccidenteArl']);
                 $('#cmbCalificacionArlAccidente').val(respuesta['calificacionArlAccidente']);
@@ -151,6 +153,7 @@ function Limpiar() {
     $('#txtAgenteAccidente').val('');
     $('#cmbImpactoAccidente').val('');
     $('#datFechaLimiteInvestigacion').val('');
+    $('#datFechaInvestigacionCurso').val('');
     $('#cmbEstadoImplementacionAcciones').val('');
     $('#cmbPruebasAccidenteArl').val('');
     $('#cmbCalificacionArlAccidente').val('');
