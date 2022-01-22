@@ -684,13 +684,38 @@ class Estadisticas
     }
 
     /**
-     * Agregar Cargo a la base de datos
+     * Agregar Estadisticas a la base de datos
      * @access public
      * @return true
      */
     public function Agregar()
     {
-        $sentenciaSql = "CALL Agregar_estadistica('$this->vin'
+        $sentenciaSql = "CALL Agregar_estadisticas('$this->vinculacion'
+                        ,'$this->centroFormacion'
+                        ,$this->idPersona
+                        ,'$this->tipoAccidente'
+                        ,'$this->fechaAccidente'
+                        ,'$this->diaSemanaAccidente'
+                        ,'$this->fechaReporteArl'
+                        ,'$this->fechaReporteEps'
+                        ,'$this->fechaReporteOficina'
+                        ,$this->diasIncapacidad
+                        ,$this->diasCargados
+                        ,'$this->diagnostico'
+                        ,'$this->descripcionAt'
+                        ,'$this->lugarAccidente'
+                        ,'$this->sitioExactoAccidente'
+                        ,'$this->riesgoLocativo'
+                        ,'$this->tipoLesion'
+                        ,'$this->parteAfectada'
+                        ,'$this->mecanismoAccidente'
+                        ,'$this->agenteAccidente'
+                        ,'$this->impactoAccidente'
+                        ,'$this->fechaLimiteInvestigacion'
+                        ,'$this->fechaInvestigacionCurso'
+                        ,'$this->estadoImplementacionAcciones'
+                        ,'$this->pruebasAccidenteArl'
+                        ,'$this->calificacionAccidenteArl'
                         ,'$this->estado'
                         ,$this->idUsuarioCreacion
                         ,$this->idUsuarioModificacion)";
@@ -700,44 +725,69 @@ class Estadisticas
     }
 
     /**
-     * Modificar Cargo en la base de datos
+     * Modificar Estadisticas en la base de datos
      * @access public
      * @return true
      */
     public function Modificar()
     {
-        $sentenciaSql = "CALL Modificar_cargo('$this->descripcion',
-                        '$this->estado',
-                        '$this->idUsuarioModificacion',
-                        $this->idCargo)";
+        $sentenciaSql = "CALL Modificar_estadisticas('$this->vinculacion'
+                        ,'$this->centroFormacion'
+                        ,$this->idPersona
+                        ,'$this->tipoAccidente'
+                        ,'$this->fechaAccidente'
+                        ,'$this->diaSemanaAccidente'
+                        ,'$this->fechaReporteArl'
+                        ,'$this->fechaReporteEps'
+                        ,'$this->fechaReporteOficina'
+                        ,$this->diasIncapacidad
+                        ,$this->diasCargados
+                        ,'$this->diagnostico'
+                        ,'$this->descripcionAt'
+                        ,'$this->lugarAccidente'
+                        ,'$this->sitioExactoAccidente'
+                        ,'$this->riesgoLocativo'
+                        ,'$this->tipoLesion'
+                        ,'$this->parteAfectada'
+                        ,'$this->mecanismoAccidente'
+                        ,'$this->agenteAccidente'
+                        ,'$this->impactoAccidente'
+                        ,'$this->fechaLimiteInvestigacion'
+                        ,'$this->fechaInvestigacionCurso'
+                        ,'$this->estadoImplementacionAcciones'
+                        ,'$this->pruebasAccidenteArl'
+                        ,'$this->calificacionAccidenteArl'
+                        ,'$this->estado'
+                        ,$this->idUsuarioModificacion
+                        ,$this->idEstadisticas)";
         $this->conn->preparar($sentenciaSql);
         $this->conn->ejecutar();
         return true;
     }
 
     /**
-     * Eliminar Cargo de la base de datos
+     * Eliminar Estadisticas de la base de datos
      * @access public
      * @return true
      */
     public function Eliminar()
     {
-        $sentenciaSql = "DELETE FROM cargo 
-                            WHERE id_cargo = $this->idCargo";
+        $sentenciaSql = "DELETE FROM estadisticas 
+                            WHERE id_estadisticas = $this->idEstadisticas";
         $this->conn->preparar($sentenciaSql);
         $this->conn->ejecutar();
         return true;
     }
 
     /**
-     * Consultar Cargo en la base de datos
+     * Consultar Estadisticas en la base de datos
      * @access public
      * @return true
      */
     public function Consultar()
     {
         $condicion = $this->obtenerCondicion();
-        $sentenciaSql = "SELECT * FROM cargo $condicion";
+        $sentenciaSql = "SELECT * FROM estadisticas $condicion";
         $this->conn->preparar($sentenciaSql);
         $this->conn->ejecutar();
         return true;
@@ -753,8 +803,8 @@ class Estadisticas
         $whereAnd = " WHERE ";
         $condicion = " ";
 
-        if ($this->idCargo != '') {
-            $condicion = $whereAnd . $condicion . " id_cargo  = $this->idCargo";
+        if ($this->idEstadisticas != '') {
+            $condicion = $whereAnd . $condicion . " id_estadisticas  = $this->idEstadisticas";
             $whereAnd = ' AND ';
         }
         if ($this->descripcion != '') {
@@ -763,10 +813,10 @@ class Estadisticas
         }
         if ($this->estado != '') {
             if ($whereAnd == ' AND ') {
-                $condicion = $condicion . $whereAnd . " cargo.estado = '$this->estado'";
+                $condicion = $condicion . $whereAnd . " estadisticas.estado = '$this->estado'";
                 $whereAnd = ' AND ';
             } else {
-                $condicion = $whereAnd . $condicion . " cargo.estado = '$this->estado'";
+                $condicion = $whereAnd . $condicion . " estadisticas.estado = '$this->estado'";
                 $whereAnd = ' AND ';
             }
         }
@@ -774,15 +824,15 @@ class Estadisticas
     }
 
     /**
-     * Destruye los atributos de Cargo y la conexión a la base de datos
+     * Destruye los atributos de Estadisticas y la conexión a la base de datos
      * @access public
      * @return void
      */
     public function __destruct()
     {
 
-        unset($this->idCargo);
-        unset($this->codigoCargo);
+        unset($this->idEstadisticas);
+        unset($this->codigoEstadisticas);
         unset($this->descripcion);
         unset($this->estado);
         unset($this->fechaCreacion);
