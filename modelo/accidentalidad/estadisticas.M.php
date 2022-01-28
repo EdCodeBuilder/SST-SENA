@@ -787,7 +787,37 @@ class Estadisticas
     public function Consultar()
     {
         $condicion = $this->obtenerCondicion();
-        $sentenciaSql = "SELECT * FROM estadisticas $condicion";
+        $sentenciaSql = "SELECT CONCAT(p.nombre,' ',p.apellido) AS nombre
+                                ,e.vinculacion
+                                ,e.centro_formacion
+                                ,e.tipo_accidente
+                                ,e.fecha_accidente
+                                ,e.dia_semana_accidente
+                                ,e.fecha_reporte_arl
+                                ,e.fecha_reporte_eps
+                                ,e.fecha_reporte_oficina
+                                ,e.dias_incapacidad
+                                ,e.dias_cargados
+                                ,e.diagnostico
+                                ,e.descripcion_at
+                                ,e.lugar_accidente
+                                ,e.sitio_exacto_accidente
+                                ,e.riesgo_locativo
+                                ,e.tipo_lesion
+                                ,e.parte_afectada
+                                ,e.mecanismo_accidente
+                                ,e.agente_accidente
+                                ,e.impacto_accidente
+                                ,e.fecha_limite_investigacion
+                                ,e.fecha_investigacion_curso
+                                ,e.estado_implementacion_acciones
+                                ,e.pruebas_accidente_arl
+                                ,e.calificacion_accidente_arl
+                                ,e.estado
+                                ,e.id_estadisticas
+                            FROM estadisticas AS e
+                            INNER JOIN persona AS p ON e.id_persona = p.id_persona
+                            $condicion";
         $this->conn->preparar($sentenciaSql);
         $this->conn->ejecutar();
         return true;
@@ -807,19 +837,6 @@ class Estadisticas
             $condicion = $whereAnd . $condicion . " id_estadisticas  = $this->idEstadisticas";
             $whereAnd = ' AND ';
         }
-        if ($this->descripcion != '') {
-            $condicion = $condicion . $whereAnd . " descripcion LIKE '%$this->descripcion%' ";
-            $whereAnd = ' AND ';
-        }
-        if ($this->estado != '') {
-            if ($whereAnd == ' AND ') {
-                $condicion = $condicion . $whereAnd . " estadisticas.estado = '$this->estado'";
-                $whereAnd = ' AND ';
-            } else {
-                $condicion = $whereAnd . $condicion . " estadisticas.estado = '$this->estado'";
-                $whereAnd = ' AND ';
-            }
-        }
         return $condicion;
     }
 
@@ -832,10 +849,34 @@ class Estadisticas
     {
 
         unset($this->idEstadisticas);
-        unset($this->codigoEstadisticas);
-        unset($this->descripcion);
+        unset($this->vinculacion);
+        unset($this->centroFormacion);
+        unset($this->idPersona);
+        unset($this->tipoAccidente);
+        unset($this->fechaAccidente);
+        unset($this->diaSemanaAccidente);
+        unset($this->fechaReporteArl);
+        unset($this->fechaReporteEps);
+        unset($this->fechaReporteOficina);
+        unset($this->diasIncapacidad);
+        unset($this->diasCargados);
+        unset($this->diagnostico);
+        unset($this->descripcionAt);
+        unset($this->lugarAccidente);
+        unset($this->sitioExactoAccidente);
+        unset($this->riesgoLocativo);
+        unset($this->tipoLesion);
+        unset($this->parteAfectada);
+        unset($this->mecanismoAccidente);
+        unset($this->agenteAccidente);
+        unset($this->impactoAccidente);
+        unset($this->fechaLimiteInvestigacion);
+        unset($this->fechaInvestigacionCurso);
+        unset($this->estadoImplementacionAcciones);
+        unset($this->pruebasAccidenteArl);
+        unset($this->calificacionAccidenteArl);
         unset($this->estado);
-        unset($this->fechaCreacion);
+        unset($this->fechaCrecion);
         unset($this->fechaModificacion);
         unset($this->idUsuarioCreacion);
         unset($this->idUsuarioModificacion);

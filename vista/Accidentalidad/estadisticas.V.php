@@ -266,6 +266,8 @@ require("../../componente/libreria/libreria.php");
                                     <td align="center">¿Se Anexaron las pruebas del accidente a la ARL?</td>
                                     <td align="center">¿La ARL calificó el accidente?</td>
                                     <td align="center">Estado</td>
+                                    <td align="center">Modificar</td>
+                                    <td align="center">Eliminar</td>
                                 </tr>
                             </thead>
                             <tbody id="resultado">

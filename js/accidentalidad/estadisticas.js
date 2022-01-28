@@ -52,7 +52,7 @@ function Enviar(accion, id) {
             }
 
             //Respuesta muchos registros
-            if (respuesta['accion'] == 'CONSULTAR' && respuesta['numeroRegistros'] > 1) {
+            if (respuesta['accion'] == 'CONSULTAR' && respuesta['numeroRegistros'] >= 1) {
                 $("#resultado").html(respuesta['tablaRegistro']);
 
                 //Código para DataTable
@@ -130,6 +130,17 @@ function Enviar(accion, id) {
         }
     });
 }
+
+$(function(){
+    //se carga el autocompleta
+     $("#txtPersona").autocomplete({
+        source:'../../busqueda/seguridad/persona.B.php',
+        select:function(event, ui){
+            $("#hidIdPersona").val(ui.item.id);
+        }
+     }); 
+});
+
 function Limpiar() {
     $('#hidIdEstadisticas').val('');
     $('#cmbCentroFormacion').val('');
