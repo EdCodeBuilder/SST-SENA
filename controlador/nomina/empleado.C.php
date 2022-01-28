@@ -45,7 +45,7 @@ if (isset ($accion)){
                 $resultado = $empleado->Modificar();
                 $respuesta['respuesta']="La información se actualizó correctamente.";
             }catch(Exception $e){
-                $respuesta['respuesta']="Error, no fué posible modificar la información, consulte con el administrador.";
+                $respuesta['respuesta']="Error, no fué posible modificar la información, consulte con el administrador. Mensaje: ".$e->getMessage();
             }
             $respuesta['accion']='MODIFICAR';
             echo json_encode($respuesta);
