@@ -788,6 +788,7 @@ class Estadisticas
     {
         $condicion = $this->obtenerCondicion();
         $sentenciaSql = "SELECT CONCAT(p.nombre,' ',p.apellido) AS nombre
+                                ,e.id_persona
                                 ,e.vinculacion
                                 ,e.centro_formacion
                                 ,e.tipo_accidente

@@ -4,10 +4,10 @@ include '../../entorno/conexion.php';
 require '../../modelo/accidentalidad/estadisticas.M.php';
 $respuesta = array();
 $accion = $_POST['accion'];
-if (isset($accion)) {
-    switch ($accion) {
+if (isset ($accion)){
+    switch($accion){
         case 'ADICIONAR':
-            try {
+            try{
                 $estadisticas = new Estadisticas();
                 $estadisticas->setVinculacion($_POST['vinculacion']);
                 $estadisticas->setCentroFormacion($_POST['centroFormacion']);
@@ -40,14 +40,14 @@ if (isset($accion)) {
                 $estadisticas->setIdUsuarioModificacion(1); // Obtener id de la persona con la variable session
                 $resultado = $estadisticas->Agregar();
                 $respuesta['respuesta'] = "La información se adicionó correctamente.";
-            } catch (Exception $e) {
-                $respuesta['respuesta'] = "Error, no fué posible adicionar la información, consulte con el administrador. Mensaje: " . $e->getMessage();
+            }catch(Exception $e){
+                $respuesta['respuesta']="Error, no fué posible adicionar la información, consulte con el administrador. Mensaje: ".$e->getMessage();
             }
-            $respuesta['accion'] = 'ADICIONAR';
+            $respuesta['accion']='ADICIONAR'; 
             echo json_encode($respuesta);
-            break;
+        break;
         case 'MODIFICAR':
-            try {
+            try{
                 $estadisticas = new Estadisticas();
                 $estadisticas->setVinculacion($_POST['vinculacion']);
                 $estadisticas->setCentroFormacion($_POST['centroFormacion']);
@@ -79,26 +79,26 @@ if (isset($accion)) {
                 $estadisticas->setIdUsuarioModificacion(1);
                 $resultado = $estadisticas->Modificar();
                 $respuesta['respuesta'] = "La información se actualizó correctamente.";
-            } catch (Exception $e) {
-                $respuesta['respuesta'] = "Error, no fué posible modificar la información, consulte con el administrador. Mensaje: " . $e->getMessage();
+            }catch(Exception $e){
+                $respuesta['respuesta']="Error, no fué posible modificar la información, consulte con el administrador. Mensaje: ".$e->getMessage();
             }
-            $respuesta['accion'] = 'MODIFICAR';
+            $respuesta['accion']='MODIFICAR';
             echo json_encode($respuesta);
-            break;
+        break;
         case 'ELIMINAR':
-            try {
+            try{
                 $estadisticas = new Estadisticas();
                 $estadisticas->setIdEstadisticas($_POST['id']);
                 $resultado = $estadisticas->Eliminar();
                 $respuesta['respuesta'] = "La información se eliminó correctamente.";
-            } catch (Exception $e) {
-                $respuesta['respuesta'] = "Error, no fué posible eliminar la información, consulte con el administrador.";
+            }catch(Exception $e){
+                $respuesta['respuesta']="Error, no fué posible eliminar la información, consulte con el administrador.";
             }
-            $respuesta['accion'] = 'ELIMINAR';
+            $respuesta['accion']='ELIMINAR';
             echo json_encode($respuesta);
-            break;
+        break;
         case 'CONSULTAR':
-            try {
+            try{
                 $estadisticas = new Estadisticas();
                 $estadisticas->setIdEstadisticas($_POST['id']);
                 $estadisticas->setCentroFormacion($_POST['centroFormacion']);
@@ -124,20 +124,11 @@ if (isset($accion)) {
                 $estadisticas->setEstadoImplementacionAcciones($_POST['estadoImplementacionAcciones']);
                 $estadisticas->setPruebasAccidenteArl($_POST['pruebasAccidenteArl']);
                 $estadisticas->setCalificacionAccidenteArl($_POST['calificacionAccidenteArl']);
-                $estadisticas->setEstado($_POST['estado']);
-                // $estadisticas->setIdEmpleado($_POST['id']);
-                // $estadisticas->setIdCargo($_POST['idCargo']);
-                // $estadisticas->setCorreoInstitucional($_POST['correoInstitucional']);
-                // $estadisticas->setFechaIngreso($_POST['fechaIngreso']);
-                // $estadisticas->setArl($_POST['arl']);
-                // $estadisticas->setSalud($_POST['salud']);
-                // $estadisticas->setPension($_POST['pension']);
-                // $estadisticas->setIdPersona($_POST['idPersona']);
-                // $estadisticas->setSueldoBasico($_POST['sueldoBasico']);
+                $estadisticas->setEstado($_POST['estado']);                           
                 $resultado = $estadisticas->consultar();
                 $numeroRegistros = $estadisticas->conn->ObtenerNumeroRegistros();
-                if ($numeroRegistros !== 1) {
-                    if ($rowBuscar = $estadisticas->conn->ObtenerObjeto()) {
+                if($numeroRegistros === 1){
+                    if ($rowBuscar = $estadisticas->conn->ObtenerObjeto()){
                         $respuesta['id']=$rowBuscar->id_estadisticas;
                         $respuesta['centroFormacion']=$rowBuscar->centro_formacion;
                         $respuesta['idPersona']=$rowBuscar->id_persona;
@@ -165,25 +156,12 @@ if (isset($accion)) {
                         $respuesta['pruebasAccidenteArl']=$rowBuscar->pruebas_accidente_arl;
                         $respuesta['calificacionArlAccidente']=$rowBuscar->calificacion_accidente_arl;
                         $respuesta['estado']=$rowBuscar->estado;
-                        // $respuesta['']=$rowBuscar->;
-                        // $respuesta['id'] = $rowBuscar->id_empleado;
-                        // $respuesta['idCargo'] = $rowBuscar->id_cargo;
-                        // $respuesta['cargo'] = $rowBuscar->descripcion;
-                        // $respuesta['correoInstitucional'] = $rowBuscar->correo_institucional;
-                        // $respuesta['fechaIngreso'] = $rowBuscar->fecha_ingreso;
-                        // $respuesta['arl'] = $rowBuscar->arl;
-                        // $respuesta['salud'] = $rowBuscar->salud;
-                        // $respuesta['pension'] = $rowBuscar->pension;
-                        // $respuesta['idPersona'] = $rowBuscar->id_persona;
-                        // $respuesta['sueldoBasico'] = $rowBuscar->sueldo_basico;
-                        // $respuesta['persona'] = $rowBuscar->nombre;
-                        // $respuesta['estado'] = $rowBuscar->estado;
-                        $respuesta['eliminar'] = "<input type='button' name='eliminar' class='eliminar' value='Eliminar' onclick='Enviar(\"ELIMINAR\"," . $rowBuscar->id_empleado . ")'>";
+                        $respuesta['eliminar'] = "<input type='button' name='eliminar' class='eliminar' value='Eliminar' onclick='Enviar(\"ELIMINAR\",".$rowBuscar->id_estadisticas.")'>";
                     }
-                } else {
-                    if (isset($resultado)) {
-                        $retorno = "<table>";
-                        foreach ($estadisticas->conn->ObtenerRegistros() as $rowConsulta) {
+                }else{
+                    if(isset($resultado)){
+                        $retorno="<table>";
+                        foreach($estadisticas->conn->ObtenerRegistros() AS $rowConsulta){
                             $retorno .= "<tr>
                                             <td><label>" . $rowConsulta[0] . "</label></td>
                                             <td><label>" . $rowConsulta[1] . "</label></td>
@@ -217,17 +195,17 @@ if (isset($accion)) {
                                         </tr>";
                         }
                         $retorno .= "</table>";
-                        $respuesta['tablaRegistro'] = $retorno;
-                    } else {
-                        $respuesta['tablaRegistro'] = 'No existen datos!!!';
+                        $respuesta['tablaRegistro']=$retorno;
+                    }else{                                         
+                        $respuesta['tablaRegistro']='No existen datos!!!';
                     }
-                }
-            } catch (Exception $e) {
-                $respuesta['respuesta'] = "Error, no fué posible consultar la información, consulte con el administrador.";
+                }                                                     
+            }catch(Exception $e){
+                $respuesta['respuesta']="Error, no fué posible consultar la información, consulte con el administrador.";
             }
-            $respuesta['numeroRegistros'] = $numeroRegistros;
-            $respuesta['accion'] = 'CONSULTAR';
-            echo json_encode($respuesta);
-            break;
+            $respuesta['numeroRegistros']=$numeroRegistros;
+            $respuesta['accion']='CONSULTAR'; 
+            echo json_encode($respuesta);           
+        break;
     }
 }

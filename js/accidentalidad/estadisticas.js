@@ -34,12 +34,12 @@ function Enviar(accion, id) {
     };
     $.ajax({
         data: parametros, //datos que se van a enviar al ajax
-        url: '../../controlador/accidentalidad/estadisticas.C.php', //archivo php que recibe los datos
+        url: '../../controlador/accidentalidad/estadisticas2.C.php', //archivo php que recibe los datos
         type: 'post', //método para enviar los datos
         dataType: 'json',//Recibe el array desde php
 
         success: function (respuesta) { //procesa y devuelve la respuesta
-            // console.log(respuesta);
+            console.log(respuesta);
 
             //Reiniciar datatable
             $("#tableDatos").dataTable().fnDestroy();
@@ -52,7 +52,7 @@ function Enviar(accion, id) {
             }
 
             //Respuesta muchos registros
-            if (respuesta['accion'] == 'CONSULTAR' && respuesta['numeroRegistros'] >= 1) {
+            if (respuesta['accion'] == 'CONSULTAR' && respuesta['numeroRegistros'] > 1) {
                 $("#resultado").html(respuesta['tablaRegistro']);
 
                 //Código para DataTable
@@ -84,7 +84,7 @@ function Enviar(accion, id) {
             }
 
             //Respuesta un registro                
-            if (respuesta['accion'] == 'CONSULTAR' && respuesta['numeroRegistros'] == 1) {
+            if (respuesta['accion'] == 'CONSULTAR' && respuesta['numeroRegistros'] !== 1) {
                 $('#hidIdEstadisticas').val(respuesta['id']);
                 $('#cmbCentroFormacion').val(respuesta['centroFormacion']);
                 $('#hidIdPersona').val(respuesta['idPersona']);
